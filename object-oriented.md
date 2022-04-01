@@ -84,3 +84,14 @@ Some differences between an interface and an abstract class are:
 * **Visibility**: all methods in an interface are public by default. An abstract class can also have private methods.
 
 </details> 
+
+<details>
+<summary>What is the difference between the visibility of private, protected and public methods?</summary>
+
+* **Private methods** are visibile only within the class.
+
+* **Protected methods** are are visible within the class and also within the child classes.
+
+* **Public methods** are visible everywhere.
+
+</details>
