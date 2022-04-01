@@ -42,7 +42,7 @@ The four core concepts of object oriented programming are:
 <summary>What are the differences between method overloading and method overriding?</summary>
 The differences between method overloading and method overriding are:
 
-* **method overloading** is when you have a method with the same name and different parameters, for example you have
+* **method overloading** is when you have a method with the same name and different parameters within the same class. For example you have
 ```Csharp
 class myClass {
     int add(int a, int b) {return a+b;}
@@ -66,10 +66,12 @@ Method overriding is also called runtime polymorphism.
 </details> 
 
 <details>
-<summary>What is runtime polymorphism</summary>
+<summary>What is runtime polymorphism? What is compile time polymorphism?</summary>
 
 **Runtime polymorphism** is a process in which a call to an overridden method is resolved at runtime rather than at compile time.
 Runtime polymorphism involves that a child class overrides a method of its parent class. 
+
+**Compile time polymorphism** is when you have a class with a method with the same name but different parameters. In this case depending on the types of parameters passed, the compiler knows what version of the method it is to be called.
 </details> 
 
 <details>
