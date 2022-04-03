@@ -32,7 +32,7 @@ For example if you have a `Car` class that contains an instance of the `Engine` 
 <summary>What the the four core concepts of object oriented programming?</summary>
 The four core concepts of object oriented programming are:
 
-* **Inheritance:** inheritance means that a child class can inherit the features of a base class and add new features.
+* **Inheritance:** inheritance means that a child class can inherit the features of a base class and add new features. Inheritance is a mechanism for reusing code.
 * **Polymorphism:** polymorphism means "appearing in different forms". For example a method in a base class can be overriden in a child class. As a result we have two different forms of that method. Another example of polymorphism is that we can have the same function with different types of parameters.
 * **Abstraction:** abstraction is a concept in which the code implementation is hidden away from the user. For example you can have a `Car` class implementing the `IStart` interface with the `start()` method. As users of the class we only care about `Car` implementing the `start()` method and not about any internal variable.  
 * **Encapsulation:** encapsulation is a concept that refers to encapsulating some data inside a class by making it private and that data cannot be accessed from outside that class. 
@@ -93,5 +93,46 @@ Some differences between an interface and an abstract class are:
 * **Protected methods** are are visible within the class and also within the child classes.
 
 * **Public methods** are visible everywhere.
+
+</details>
+
+<details>
+<summary>What is a static method?</summary>
+
+A **static method** is a method that can be called without creating an instance of a class.
+
+</details>
+
+<details>
+<summary>What is an abstract method?</summary>
+
+An **abstract method** is a method that has only a signature and has no body. It can be declared only in an abstract class.
+
+</details>
+
+<details>
+<summary>What is inversion of control (IOC)?</summary>
+
+**Inversion of control (IOC)** is a generic concept that involves providing any kind of callback
+instead of acting ourselves directly. We can also say that we delegate a functionality to an external component 
+which gives us back the desired result with a callback. In this way we pass *control* to an external component.
+That external component could be a framework or a library. 
+
+For example rather than having `class1` creating an instance of `class2`, an instance of `class2` is passed to the constructor of `class1`. In this way `class1` is not responsible for the creation of `class2`. 
+
+</details>
+
+
+ <details>
+<summary>What is dependency injection (DI)?</summary>
+
+**Dependency injection (DI)** is a subtype of inversion of control focused on class instances. 
+
+Let us suppose we have `class1` that references `class2` and `class3`. With a dependency injection framework, `class1` does not need to
+create the instances of `class2` and `class3`. These are created by the DI framework and injected into `class1` with one of the following techniques: 
+
+* constructor injection
+* property injection
+* method injection 
 
 </details>
