@@ -1,7 +1,7 @@
 ## Scrum
 
 <details>
-<summary>What is the heart of the scrum metodology</summary>
+<summary>What is the heart of the scrum metodology?</summary>
 
 The **product backlog** is the heart of scrum. It is a prioritized list of requirements (=stories)
 </details>
