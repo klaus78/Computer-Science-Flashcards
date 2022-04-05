@@ -1,13 +1,13 @@
 <details>
 <summary>What are the differences between a library and a framework?</summary>
 
-A library and a framework are both a piece of external code that you can use in your application. 
+A library and a framework are both a piece of external code that we can use in our application. 
 
-The difference between library and framework is what is called inversion of control. In short, when you call a method from a library, 
-you are in control. But with a framework, the control is inverted: the framework calls you. 
+The difference between library and framework is what is called inversion of control. In short, when we call a method from a library, 
+we are in control. But with a framework, the control is inverted: the framework calls we. 
 
-A library allows you to control where you want to put and build your code, while a framework is already in set of the flow and has places already set for you to place your code. In other words, a framework defines a structure for your application and a set of places
-where you can put your code. 
+A library allows us to control where we want to put and build our code, while a framework is already in set of the flow and has places already set for us to place our code. In other words, a framework defines a structure for our application and a set of places
+where we can put our code. 
 
 </details>
 

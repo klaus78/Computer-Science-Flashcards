@@ -43,7 +43,7 @@ It is important that the whole team and the product owner attend the sprint plan
 </details>
 
 <details>
-<summary>How should you express the sprint goal?</summary>
+<summary>How should we express the sprint goal?</summary>
 
 The sprint goal should be express in business terms, not in technical terms so that people outside the group can understand.
 
@@ -57,10 +57,41 @@ The team decides what stories are put into the sprint backlog.
 
 </details>
 
+<details>
+<summary>How can the product owner influence the team choices concerning stories to develop?</summary>
 
-    
+The product owner can influence the stories to be put into the sprint backlog as follows
+- by changing priority of a story
+- by reducing the scope of a story
+- splitting a story into smaller stories
+</details>
+
+<details>
+<summary>What are some differences between story and task?</summary>
+
+A **story** is what the product owner cares about, it is a description of a new feature. 
+
+A **task** is one of the things to be done in order to develop a story. 
+        
+For example a story could be "create a new query use function".
+
+The tasks for that story could be
+1. design the UI
+2. write unit tests
+3. create a new database query
+
+</details>
 
 
-    
+<details>
+<summary>What is a burndown chart? What are the warning signs from it?</summary>
+
+The **burndown chart** is a chart used to track the remaining effort (Y) over a period of time (X).
+
+It could have the following warning signs:
+- actual line is over the diagonal => need to remove stories from the backlog
+- actual line is under the diagonal => need to add stories from the backlog
+
+</details>
 
 
