@@ -136,3 +136,22 @@ create the instances of `class2` and `class3`. These are created by the DI frame
 * method injection 
 
 </details>
+
+<details>
+<summary>When is composition to be prefered over inheritance?</summary>
+
+At first consider that 
+* **Composition** is a **has a** relationship, like a car has an engine.
+* **Inheritance** is a **is a** relationship, like a car is a vehicle. Remember that inheritance
+  is a more strong relationship and it should respect the Liskov substitution principle (a parent class should be completely replacable
+  by a child class).
+
+A pragmatic way to determine if you need composition or inheritance is
+
+* Does TypeB want to expose the complete interface (all public methods no less) of TypeA such that TypeB can be used where TypeA is expected? Indicates Inheritance. E.g. A Cessna biplane will expose the complete interface of an airplane, if not more. So that makes it fit to derive from Airplane.
+* Does TypeB want only some/part of the behavior exposed by TypeA? Indicates need for Composition. E.g. A Bird may need only the fly behavior of an Airplane. In this case, it makes sense to extract it out as an interface / class / both and make it a member of both classes.
+
+
+Another, very pragmatic reason, to prefer composition over inheritance has to do with your domain model, and mapping it to a relational database. It's really hard to map inheritance to the SQL model (you end up with all sorts of hacky workarounds, like creating columns that aren't always used, using views, etc). Some ORMLs try to deal with this, but it always gets complicated quickly. Composition can be easily modeled through a foreign-key relationship between two tables, but inheritance is much harder.
+
+</details>

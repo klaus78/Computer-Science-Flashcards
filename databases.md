@@ -1,8 +1,5 @@
 ## Databases
 
-<summary></summary>
-</details>
-
 <details>
 
 <summary>What are the types of relationships in a database?</summary>
@@ -34,4 +31,4 @@ or more tables.
 The **primary key** is a unique or non-null key that uniquely identifies every record in a table or relation. Each database needs a unique identifier for every row of a table, and the primary key plays a vital role in identifying rows in the table uniquely. The primary key column can't store duplicate values. It is also called a minimal super key; therefore, we cannot specify more than one primary key in any relationship.
 
 The **foreign key** is a group of one or more columns in a database to uniquely identify another database record in some other table to maintain the referential integrity. It is also known as the referencing key that establishes a relationship between two different tables in a database. A foreign key always matches the primary key column in another table. It means a foreign key column in one table refers to the primary key column of another table. A foreign key is beneficial in relational database normalization, especially when we need to access records from other tables.
-<details>>
+</details>

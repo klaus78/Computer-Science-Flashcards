@@ -33,12 +33,12 @@ of bank account (normal account or stock count) and identity card (personal id o
 **Structural** design patterns define how the objects are structures and organized.
 
 The main structural patterns are:
-* **Adapter**: is used when two objects with mismatching interfaces want to communicate. The interface of one of the objects is adapted to the other interface so that the communication is possible.
-* **Bridge**: this patterns shows that composition is more flexible than inheritance. This pattern is used to make changes to different aspects of a system independent of one another.
+* **Adapter**: is used when two objects with mismatching interfaces want to communicate. Let's say `class1` wants to communicate with `class2` but their interfaces are incopatible. The solution is to create an ``IAdapter`` interface that implements the `class2` interface and  ``Adapter `` class implementing `IAdapter`. The `Adapter` class holds a reference to `class2`. At this point `class1` can interact with `class2` through `Adapter`. 
+* **Bridge**: this patterns shows that composition is more flexible than inheritance. This pattern is used to make changes to different aspects of a system independently of each other.
 
-  Suppose that we have a product and a delivery service. If we set the delivery service type inside a product class and we create anew delivery service, we also need to create a new product class with that new delivery service.
+  Suppose that we have a product and a delivery service. If we set the delivery service type inside a product class and we create a new delivery service, we also need to create a new product class with that new delivery service.
 
-  A more flexible solution is that product class references an abstract class of delivery service. In this way I can add a new delivery service without having to create a new product class. 
+  A more flexible solution is that product class references an abstract class of delivery service. In this way we can add a new delivery service without having to create a new product class. 
 
 * **Composite**: is used when we have a tree-like set of objects. For example we could have a large container box that contains smaller fridge boxes and those fridge boxes contain food boxes. This is a tree structure. We create an interface ``IComposite``
 with the `getPrice()` method that is shared by both the nodes and the leaves. Each node in the tree can have children or not.
@@ -66,7 +66,33 @@ The main behavioral patterns are:
 
   This method should be used when the types of different object is knows, i.e. no new types are planned. Indeed if we have a new object type, we also have to edit all the visitor classes.
 * **Template**: is used when we have a function `myMethod()` that calls several subfunctions (`func1(), func2()...`) and we want to be able to customize the subfunctions. The solution is to create an abstract class `Template` in which ``myMethod()`` calls `func1(), func2()...` and at the same time `func1(), func2()....` are virtual methods that must be overwritten in the class deriving from `Template`.
+* **Command**:  it represents an actions as an object, i.e. it is an object that represents a verb. It decouples performing the action from the client that is issuing the command. Common scenarios of use are delayed execution, logging, do/undo.
 
+
+</details>
+
+
+<details>
+<summary>Which pattern is used when we need to decouple an abstraction from its implementation?</summary>
+
+When we want to decouple an abstraction from its implementation so that they can vary independently we use the **Bridge** pattern.
+</details>
+
+<details>
+<summary>When can we use the Prototype pattern?</summary>
+
+The **Prototype** pattern is a creational pattern that creates a copy of an existing object. It can make sense to use the
+Prototype pattern when
+* the costs of creating a new object are higher and / or
+* we need a similar object to the one we already have.
+</details>
+
+
+<details>
+<summary>which design pattern is helpful when we want to add a new functionality to an existing object?</summary>
+
+We can use the **Decorator** pattern as it allows us to add a new functionality to an existing object without changing the structure
+of the object itself.
 </details>
 
 <details>
