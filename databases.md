@@ -44,3 +44,17 @@ The **primary key** is a unique or non-null key that uniquely identifies every r
 
 The **foreign key** is a group of one or more columns in a database to uniquely identify another database record in some other table to maintain the referential integrity. It is also known as the referencing key that establishes a relationship between two different tables in a database. A foreign key always matches the primary key column in another table. It means a foreign key column in one table refers to the primary key column of another table. A foreign key is beneficial in relational database normalization, especially when we need to access records from other tables.
 </details>
+
+
+<details>
+<summary>What is a *logical backup*?</summary>
+
+A **logical backup**, sometimes called also a *textual dump* or *SQL backup*, is a set of SQL instructions used to re-create and re-populate a database.
+
+</details>
+
+<details>
+<summary>What is a *phisycal backup*?</summary>
+
+A **phisycal backup**, also called *binary backup*, is a consistent copy of the database storage in a way that can be restored when needed. Usually this kind of backup is used for very large databases and in disaster recovery scenarios.
+</details>
