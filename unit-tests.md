@@ -2,18 +2,18 @@
 
 <details>
 <summary>What are unit tests?</summary>
-**Unit tests* are tests that checks if a single module works fine. The single module is tested without external dependencies.
+**Unit tests** are tests that checks if a single module works fine. The single module is tested without external dependencies.
 </details>
 
 <details>
 <summary>What are integration tests?</summary>
-**Integration tests* are tests for checking if different modules can work together. 
+**Integration tests** are tests for checking if different modules can work together.
 </details>
 
 
 <details>
 <summary>What are functional tests?</summary>
-**Functional tests* are tests that check if an application functionality works fine. Functional tests are done on the complete application.
+**Functional tests** are tests that check if an application functionality works fine. Functional tests are done on the complete application.
 </details>
 
 <details>
