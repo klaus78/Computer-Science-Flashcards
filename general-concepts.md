@@ -11,6 +11,18 @@ where we can put our code.
 
 </details>
 
+
+<details>
+<summary>What is a *disaster recovery*?</summary>
+
+A **disaster recovery** is a set of guidelines and infrastructures able to recover a whole system from a disaster.
+Usually the components of a disaster recovery system must be kept in sync, so that when a system fails the other is able to start imemdiatly.
+
+As an example, an HTTP server can have an identical machine, with the same software, configuration and running states, ready to jump in if the primary machine fails.
+</details>
+
+
+
 ## Concurrency and Parallelism
 
 
