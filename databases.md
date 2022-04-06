@@ -25,6 +25,18 @@ A database **view** is a searchable object in a database that is defined by a qu
 or more tables.
 </details>
 
+
+<summary>What is a trigger?</summary>
+
+A **trigger** is a database object, usually implemented with some procedure-like logic, that reacts to specific events that happen to the data. For instance, a trigger can be *fired* after a tuple is inserted into a specific table, or when a tuple containing specific data is updated, and so on.
+
+A trigger is *attached* to and event that, in turn, is defined by an operation performed on a data table (e.g., an `INSERT`).
+The trigger can be fired before the data is committed, being able to change the data content before it hits the table, or after the data has been placed into the table, having therefore the chance to modify other dependent data.
+Moreover, a trigger can be defined on *per-statement* basis, meaning that it will be fired once per every SQL command, or on a *per-tuple* basis, meaning it will be fired once per every tuple that makes the set.
+
+Different databases provide different or partial support to triggers.
+</details>
+
 <details>
 <summary>What are the differences between primary and foreign keys?</summary>
 
