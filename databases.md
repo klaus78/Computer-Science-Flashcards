@@ -13,6 +13,18 @@ There are four relationships in database.
 
 
 <details>
+<summary>What are the ACID properties?</summary>
+
+**ACID** stands for Atomicity Consistency Isolation Durability. ACID properties are the rules that need to be fulfilled by every transaction to maintain integrity. The ACID properties are:
+
+* **Atomicity**: it means that either all transactions take place and run to completion in one go or no execution occurs at all. 
+* **Consistency**: it means that the database must be consistent before and after the transaction.
+* **Isolation**: it means that multiple transactions can be executed simultaneously without interfering with each other.
+* **Durability**: it means that a successful transaction will be stored in the non-volatile memory and will not be affected by system failure. 
+
+</details>ks
+
+<details>
 <summary>What is a stored procedure?</summary>
 
 A **stored procedure** is a piece of SQL code that is saved on a file, so the code can be reused over and over again.

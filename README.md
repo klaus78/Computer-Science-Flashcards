@@ -8,4 +8,5 @@ A set of flashcards on computer science and programming.
 * [Object oriented programming](object-oriented.md)
 * [Agile methodologies](agile-methodologies.md)
 * [Design patterns](design-patterns.md)
+* [Algorithms and data structures](algorithms-and-data-structures.md)
 * [Unit tests](unit-tests.md)

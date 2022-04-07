@@ -17,6 +17,12 @@
 </details>
 
 <details>
+<summary>What are regression tests?</summary>
+
+**Regression** testing is a type of tests that verify if the code changes do not impact existing code.
+</details>
+
+<details>
 <summary>What are a double tests? How many types of double tests are there?</summary>
 
 **Test doubles** are classes that replicate external components that could be required for a unit test, like a database or a network connection.
@@ -42,3 +48,7 @@ A **stub** is a fake object that returns a fixed value.
 A **mock** is a smarter stub. A mock says if the tests passed or failed. It does so by verifying whether the object under test called the fake object as expected (i.e. the proper methods were called).
 
 </details>
+
+
+
+
