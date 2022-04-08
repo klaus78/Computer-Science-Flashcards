@@ -13,7 +13,7 @@ where we can put our code.
 
 
 <details>
-<summary>What is a *disaster recovery*?</summary>
+<summary>What is a disaster recovery?</summary>
 
 A **disaster recovery** is a set of guidelines and infrastructures able to recover a whole system from a disaster.
 Usually the components of a disaster recovery system must be kept in sync, so that when a system fails the other is able to start imemdiatly.
@@ -27,7 +27,7 @@ As an example, an HTTP server can have an identical machine, with the same softw
 
 
 <details>
-<summary>What is the difference between **concurrency** and **parallelism**?</summary>
+<summary>What is the difference between concurrency and parallelism?</summary>
 
 **Concurrency** is the way the application behaves, meaning how requests for data and interaction are sent to it; **parallelism** is a way an application can carry on its tasks.
 
@@ -36,7 +36,7 @@ Often, concurrency is the problem (e.g., many HTTP requests hitting a web server
 
 
 <details>
-<summary>What is the difference between *multi-processing* and *multi-threading*?</summary>
+<summary>What is the difference between multi-processing and multi-threading?</summary>
 
 **Multi-processing** involves the creation of separate processes, that run completely isolated one from the other.
 **Multi-threading** requires the creation of *lightweight* processes, called **threads** that all share the same memory and therefore are not isolated each other.

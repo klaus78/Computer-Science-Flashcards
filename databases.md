@@ -22,7 +22,7 @@ There are four relationships in database.
 * **Isolation**: it means that multiple transactions can be executed simultaneously without interfering with each other.
 * **Durability**: it means that a successful transaction will be stored in the non-volatile memory and will not be affected by system failure. 
 
-</details>ks
+</details>
 
 <details>
 <summary>What is a stored procedure?</summary>
@@ -38,6 +38,7 @@ or more tables.
 </details>
 
 
+<details>
 <summary>What is a trigger?</summary>
 
 A **trigger** is a database object, usually implemented with some procedure-like logic, that reacts to specific events that happen to the data. For instance, a trigger can be *fired* after a tuple is inserted into a specific table, or when a tuple containing specific data is updated, and so on.
@@ -59,14 +60,14 @@ The **foreign key** is a group of one or more columns in a database to uniquely 
 
 
 <details>
-<summary>What is a *logical backup*?</summary>
+<summary>What is a logical backup?</summary>
 
 A **logical backup**, sometimes called also a *textual dump* or *SQL backup*, is a set of SQL instructions used to re-create and re-populate a database.
 
 </details>
 
 <details>
-<summary>What is a *phisycal backup*?</summary>
+<summary>What is a phisycal backup?</summary>
 
 A **phisycal backup**, also called *binary backup*, is a consistent copy of the database storage in a way that can be restored when needed. Usually this kind of backup is used for very large databases and in disaster recovery scenarios.
 </details>
