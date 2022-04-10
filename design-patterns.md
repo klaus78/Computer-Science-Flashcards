@@ -30,10 +30,10 @@ of bank account (normal account or stock count) and identity card (personal id o
 <details>
 <summary>What are the main structural patterns and when are they used?</summary>
 
-**Structural** design patterns define how the objects are structures and organized.
+**Structural** design patterns define how the objects are structured and organized.
 
 The main structural patterns are:
-* **Adapter**: is used when two objects with mismatching interfaces want to communicate. Let's say `class1` wants to communicate with `class2` but their interfaces are incopatible. The solution is to create an ``IAdapter`` interface that implements the `class2` interface and  ``Adapter `` class implementing `IAdapter`. The `Adapter` class holds a reference to `class2`. At this point `class1` can interact with `class2` through `Adapter`. 
+* **Adapter**: is used when two objects with mismatching interfaces want to communicate. Let's say `class1` wants to communicate with `class2` but their interfaces are incompatible. The solution is to create an ``IAdapter`` interface that implements the `class1` interface and  an ``Adapter `` class implementing `IAdapter`. The `Adapter` class holds a reference to `class2`. At this point `class1` can interact with `class2` through `Adapter`. 
 * **Bridge**: this patterns shows that composition is more flexible than inheritance. This pattern is used to make changes to different aspects of a system independently of each other.
 
   Suppose that we have a product and a delivery service. If we set the delivery service type inside a product class and we create a new delivery service, we also need to create a new product class with that new delivery service.
@@ -45,8 +45,10 @@ with the `getPrice()` method that is shared by both the nodes and the leaves. Ea
 
   The client can get the price of the any box via the `getPrice()` method. If the client asks the price to the large container box, 
   the large container box class will retrieve the price of each child recursively and determine the final price. If the client asks the price a box without subboxes, then that box class will return its price.
-* **Decorator**: is used to extend existing classing without using inheritance. For example we have a set of classes like Coffee, CoffeeWithoutCoffeine, Mocca. We want a flexible structure that allows us to add some extra variations to each coffee type like milk, cream and foam. For this purpose we can define a common structure ``IComponent`` for all classes and a ``Decorator`` class that has a reference to ``IComponent``. Finally to each coffee type we can add a single variation like foam but also add a foam variation that also includes cream. 
-* **Proxy**: it adds a ``proxyclass`` that controls the access to a ``class1``. This can be useful for example when we want to do some actions before or after accessing ``class1``. Some kind of actions could be logging, control access, caching.
+* **Decorator**: is used to extend existing classes without using inheritance. For example we have a set of classes like ``Coffee``, ``CoffeeWithoutCoffeine``, ``Mocca``. We want a flexible structure that allows us to add some extra variations to each coffee type like ``Milk``, ``Cream`` and ``Foam``. For this purpose we can define a common interface ``IComponent`` for all classes and a ``Decorator`` class that has a reference to ``IComponent``. Finally to each coffee type we can add a single variation like foam but also add a foam variation that also includes cream. 
+* **Proxy**: it is about a ``ProxyClass`` that replicates the interface of a ``Class1`` class. Both ``ProxyClass`` and ``Class1`` derive from ``IProxy``. ``ProxyClass`` acts a substition for ``Class1``. This can be useful for example when we want to do some actions before or after accessing ``Class1``. Some kind of actions could be logging, control access, caching. 
+
+  If a client wants to use ``Class1``, it actually uses ``ProxyClass`` and ``ProxyClass`` references ``Class1``.
 * **Facade**: it is used when we have a complex system, for example a large set of objects, and we want to hide that complexity. For this purpose we can create a `Facade` class that exposes a user friendly interface and internally interacts with that complex system. In this way the user can use the `Facade` class to interact with the complex system. 
 * **Flyweight**: is also known as *cache*. It is used to reduce the number of objects created. It also tries to reduce the memory footprint by sharing common information between objects rather than saving each piece of common data in each instance. The idea of the Flyweight pattern is to take data changing seldom and put it an extra common class. 
 

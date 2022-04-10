@@ -37,6 +37,7 @@ Often, concurrency is the problem (e.g., many HTTP requests hitting a web server
 
 <details>
 <summary>What is a race condition?</summary>
+
 A **race condition** happens when a number of threads can access a common resource without synchronization. Because the order of the threads accessing the resource depends on the scheduling algorithm and we do not know it, the final result is uncertaint.
 </details>
 
