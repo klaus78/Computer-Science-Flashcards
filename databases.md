@@ -103,20 +103,27 @@ The **primary key** is a unique or non-null key that uniquely identifies every r
 The **foreign key** is a group of one or more columns in a database to uniquely identify another database record in some other table to maintain the referential integrity. It is also known as the referencing key that establishes a relationship between two different tables in a database. A foreign key always matches the primary key column in another table. It means a foreign key column in one table refers to the primary key column of another table. A foreign key is beneficial in relational database normalization, especially when we need to access records from other tables.
 </details>
 
-### No-sql databases
+<details>
+<summary>What is a composite key?</summary>
+
+A **composite key** is a combination of two or more columns in a table that can be used to uniquely identify each row in the table.
+</details>
+
+
+### NoSQL databases
 
 <details>
-<summary>What are the differences between relational databases and No-SQL databases?</summary>
+<summary>What are the differences between relational databases and NoSQL databases?</summary>
 
-The main difference between **relational databases** and **No-SQL databases** is that relational databases are structured, which means that the data is stored in tables. Non-relational database are document-oriented, which means that all data is saved in text form. 
+The main difference between **relational databases** and **NoSQL databases** is that relational databases are structured, which means that the data is stored in tables. NoSQL database are document-oriented, which means that all data is saved in text form. 
 </details>
 
 <details>
-<summary>What are the main types of No-SQL databases?</summary>
+<summary>What are the main types of NoSQL databases?</summary>
 
-There are four **main types of No-SQL databases**:
+There are four **main types of NoSQL databases**:
 * **document databases**: it stores data in JSON, BSON , or XML documents.
-* **key-value stores**: is the simplest type of No-SQL database and is similar to a relational databases with two columns.
+* **key-value stores**: is the simplest type of NoSQL database and is similar to a relational databases with two columns.
 * **column-oriented databases**: rather than having a table with colums ``id,col1, col2, col3``, with column oriented databases we have three tables ``col1,id``, ``col2,id`` and ``col3,id``. In a SQL database, all of the information about a particular entry is stored in the form of a record across a row, split into columns. All of the data for that record is stored together in memory. In a columnar database, all of the information for a particular field (say, addresses) is stored together in memory. Because of this, columns not relevant to your query are ignored when searching. The drive head doesn’t have to seek (or move) as far across the platter to read a record, and so query times are much shorter.
 * **graph databases**: each element is stored as a node (such as a person in a social media graph). The connections between elements are called links or relationships. 
 </details>

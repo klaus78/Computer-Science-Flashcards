@@ -63,12 +63,19 @@ The **behavioral** design patterns define how objects communicate with each othe
 The main behavioral patterns are:
 
 * **Strategy**: a real-world example of use of the strategy method is the sorting algorithm where the comparison algorithm is a custom piece of code. 
-* **Observer**: 
+* **Observer**: is used when a ``Class1`` wants to be notified when ``Class2`` changes. ``Class2`` has the ``register`` and ``unregister`` methods so that clients like ``Class1`` can register in order to be notified when ``Class2`` changes.
 * **Visitor**: is used when have have a set of different objects and we want to apply some new functionality to each object without changing the class codes. The idea of the pattern is to create a `Visitor` class that implements a new functionality for each class member that we have. Each object in our set will implement the `IVisitable` interface. 
 
   This method should be used when the types of different object is knows, i.e. no new types are planned. Indeed if we have a new object type, we also have to edit all the visitor classes.
 * **Template**: is used when we have a function `myMethod()` that calls several subfunctions (`func1(), func2()...`) and we want to be able to customize the subfunctions. The solution is to create an abstract class `Template` in which ``myMethod()`` calls `func1(), func2()...` and at the same time `func1(), func2()....` are virtual methods that must be overwritten in the class deriving from `Template`.
 * **Command**:  it represents an actions as an object, i.e. it is an object that represents a verb. It decouples performing the action from the client that is issuing the command. Common scenarios of use are delayed execution, logging, do/undo.
+* **Memento**: is used when we want to save the state of an object so that it can be restored later. The memento pattern uses three classes:
+  * `Originator`: is the state whose states we want to save.
+  * `Memento`: contains the state of an object to be restored.
+  * `CareTaker`: keeps track of multiple instances of `Memento`.
+  
+* **State**: is used when an object changes its behavior based on its internal state.
+  One way to achieve that is to have a set of if-else blocks depending on an internal variable. The solution proposed by the State pattern is to create a concrete class for each state. All state classes derive from an `IState`. For example for a `MobilePhone`, we could have  `SilentState`, `SoundState` and `VibrationState`.
 
 
 </details>
