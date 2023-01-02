@@ -1,4 +1,5 @@
 ## Databases
+
 <details>
 <summary>What is a logical backup?</summary>
 
@@ -24,6 +25,18 @@ As an example, an HTTP server can have an identical machine, with the same softw
 <summary>What is a DBMS?</summary>
 
 A **Database Management System (DBMS)** is a collection of programs that enables users to store, retrieve, update, and delete information from a database.
+</details>
+
+<details>
+
+<summary>What is a database, a data warehouse and a data lake? What are the key differences between them?</summary>
+
+A **database** is a collection of data that can be stored and retrieved.
+
+A **data warehouse** is a system that can store a large amount of data from various sources. 
+That data is processed and filtered and can be used for data analysis and analytics.
+
+A **data lake** is a set of data from various sources that is stored in its original format, e.g. JSON, CSV etc..
 </details>
 
 
