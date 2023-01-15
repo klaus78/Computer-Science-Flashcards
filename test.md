@@ -65,83 +65,10 @@ These are a few different approaches for Inter- Process Communication:
 1. **FIFO**: Communication between two unrelated processes. It is a full-duplex method, which means that the first process can communicate with the second process, and the opposite can also happen.
 </details>
 
-<details>
-<summary>What are the different types of locks?</summary>
-
-There are the following types of **locks**:
-
-* **Semaphore**  is a lower-level object. You might well use a semaphore to implement a monitor. A semaphore essentially is just a counter. When the counter is positive, if a thread tries to acquire the semaphore then it is allowed, and the counter is decremented. When a thread is done then it releases the semaphore, and increments the counter.
-
-    If the counter is already zero when a thread tries to acquire the semaphore then it has to wait until another thread releases the semaphore. If multiple threads are waiting when a thread releases a semaphore then one of them gets it. The thread that releases a semaphore need not be the same thread that acquired it.
-
-    A monitor is like a public toilet. Only one person can enter at a time. They lock the door to prevent anyone else coming in, do their stuff, and then unlock it when they leave.
-
-    A semaphore is like a bike hire place. They have a certain number of bikes. If you try and hire a bike and they have one free then you can take it, otherwise you must wait. When someone returns their bike then someone else can take it. If you have a bike then you can give it to someone else to return --- the bike hire place doesn't care who returns it, as long as they get their bike back.
 
 
-* **Mutex** is for multiprocess synchronization. Usually, mutexes are provided by the OS kernel and libraries/frameworks simply provide an interface to invoke it. This makes them heavy-weight/slower, but they work across threads on different processes. 
 
-* **Monitor** is for multithread synchronization within the same process. Usually, the implementation of monitors is faster/light-weight, since it is designed for multi-threaded synchronization within the same process. Also, usually, it is provided by a framework/library itself (as opposed to requesting the OS).
-</details>
 
-## Networking
-<details>
-<summary>What are the seven layers of the ISO / OSI?</summary>
-
-The International Organization for Standardization (ISO) developed the Open Systems Interconnection (OSI) model, which allows different communication systems to communicate via standard protocols.
-
-The OSI model is divided into seven layers, as follows
-
-1. **Physical Layer** takes care of transmission and reception of raw bytestreams over a physical medium.
-1. **Data Link Layer** performs the most reliable node to node delivery of data. It forms frames from the packets that are received from network layer and gives it to physical layer. It also synchronizes the information which is to be transmitted over the data. Error controlling is easily done. The encoded data are then passed to physical
-1. **Network Layer**: controls the source to destination delivery of data packets across multiple nodes (routing). Network layer is implemented by network devices such as routers.
-1. **Transport Layer** is responsible for delivery of an entire message from an application program on the source device to a similar application program on the destination device. Protocols are TCP and UDP.
-1. **Session Layer** is responsible for establishing, managing, synchronizing and terminating sessions between end-user application processes.
-1. **Presentation Layer** ensures that the message is presented to the upper layer in a standardized format. It deals with the syntax and the semantics of the messages (encryption - compression).
-1. **Application Layer** is the topmost layer of the OSI model. It specifies the interfaces and supports services to the end users for network access. Some examples are HTTP, FTP and SMTP.
-
-The basic difference between network layer and transport layer is that transport layer protocol provides logical communication between processes running on different hosts , whereas network layer protocol provides logical communication between processes within the same host.
-</details>
-
-<details>
-<summary>Hub vs switch vs router?</summary>
-
-A **switch**, also known as an Ethernet switch and network switch, is a piece of networking hardware used on WANs and LANs. A switch connects multiple devices on a network and manages packets according to the IP address of the device.
-
-In a network, a **router** is layer-3 networking hardware used at the network layer of the OSI design. A router can connect a network to another network and transfer data between them. Unlike the hub, a router will use IP address information to transfer IP packets.
-
-A **hub** is a simple networking device that connects several devices in a Local Area Network. Unlike the other two devices I have mentioned before, a hub does not filter information. Instead, it copies the incoming data to all the devices connected to the network and vice versa. Network hubs, also known as Ethernet hubs, are also used to enhance the network distance. However, these devices do not recognize the devices based on the IP address. On the other hand, the system simply copies information as a part of the routine.
-
-</details>
-
-## Web
-<details>
-<summary>What is a single page application?</summary>
-
-A **single-page application (SPA)** is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app.
-
-In a SPA, a page refresh never occurs; instead, all necessary HTML, JavaScript, and CSS code is either retrieved by the browser with a single page load,[1] or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.
-</details>
-
-<details>
-<summary>What is Razor?</summary>
-
-**Razor** is a markup syntax that lets you embed server-based code into web pages using C# and VB.Net. It is not a programming language. It is a server side markup language.
-
-Server-based code can create dynamic web content on the fly, while a web page is written to the browser. When a web page is called, the server executes the server-based code inside the page before it returns the page to the browser. By running on the server, the code can perform complex tasks, like accessing databases.
-</details>
-
-<details>
-<summary>What is paging?</summary>
-
-**Paging** refers to getting partial results from an API which is useful when the API result is very large.
-</details>
-
-<details>
-<summary>What is filtering?</summary>
-
-**Filtering** refers to showing only part of the results of a web api call.
-</details>
 
 ## UML
 <details>

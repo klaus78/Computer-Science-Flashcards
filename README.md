@@ -9,5 +9,6 @@ A set of flashcards on computer science and programming.
 * [Design patterns](design-patterns.md)
 * [Algorithms and data structures](algorithms-and-data-structures.md)
 * [Computer networks](network-communication.md)
+* [Internet and Web](internet-and-web.md)
 * [Agile methodologies](agile-methodologies.md)
 * [Unit tests](unit-tests.md)
