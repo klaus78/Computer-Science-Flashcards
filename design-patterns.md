@@ -61,9 +61,9 @@ The main behavioral patterns are:
 
 * **Strategy**: a real-world example of use of the strategy method is the sorting algorithm where the comparison algorithm is a custom piece of code. 
 * **Observer**: is used when a ``Class1`` wants to be notified when ``Class2`` changes. ``Class2`` has the ``register`` and ``unregister`` methods so that clients like ``Class1`` can register in order to be notified when ``Class2`` changes.
-* **Visitor**: is used when have have a set of different objects and we want to apply some new functionality to each object without changing the class codes. The idea of the pattern is to create a `Visitor` class that implements a new functionality for each class member that we have. Each object in our set will implement the `IVisitable` interface. 
+* **Visitor**: is used when having a set of different objects and we want to apply some new functionality to each object without changing the class codes. The idea of the pattern is to create a `Visitor` class that implements a new functionality for each class member that we have. Each object in our set will implement the `IVisitable` interface.
 
-  This method should be used when the types of different object is knows, i.e. no new types are planned. Indeed if we have a new object type, we also have to edit all the visitor classes.
+  This method should be used when the types of different object are well known, i.e. no new types are planned. Indeed if we have a new object type, we also have to edit all the visitor classes.
 * **Template**: is used when we have a function `myMethod()` that calls several subfunctions (`func1(), func2()...`) and we want to be able to customize the subfunctions. The solution is to create an abstract class `Template` in which ``myMethod()`` calls `func1(), func2()...` and at the same time `func1(), func2()....` are virtual methods that must be overwritten in the class deriving from `Template`.
 * **Command**:  it represents an action as an object, i.e. it is an object that represents a verb. It decouples performing the action from the client that is issuing the command. Common scenarios of use are delayed execution, logging, do/undo.
 * **Memento**: is used when we want to save the state of an object so that it can be restored later. The memento pattern uses three classes:
