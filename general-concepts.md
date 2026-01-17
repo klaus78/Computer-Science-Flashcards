@@ -35,7 +35,9 @@ Often, concurrency is the problem (e.g., many HTTP requests hitting a web server
 <details>
 <summary>What is a race condition?</summary>
 
-A **race condition** happens when a number of threads can access a common resource without synchronization. Because the order of the threads accessing the resource depends on the scheduling algorithm and we do not know it, the final result is uncertaint.
+A **race condition** happens when a number of threads can access a shared resource without a proper synchronization.
+
+Because the exact order of the threads accessing the resource depends on the scheduling algorithm and cannot be predicted, the final outcome becomes uncertain and may vary from one execution to another.
 </details>
 
 
@@ -50,8 +52,11 @@ A **starvation** is when a process or a thread is unable to acquire a resource b
 <details>
 <summary>What is a lock?</summary>
 
-A **lock** is a resource used to *protect* another resource that parallel processes are going to acquire in turn.
-There are different implementation of locks, depending on the context they are applied. Some examples are *spin-locks*, *sempahores*, *mutexes* and so on.
+A **lock** is a synchronization mechanism used to *protect* a shared resource when multiple threads or processes need to access it.
+
+By ensuring that only one thread/process can acquire the lock at a time, the lock prevents multiple threads from accessing the shared resource simultaneously, avoiding race conditions and inconsistent states.
+
+There are different implementation of locks, depending on the context, such as *spinlocks*, *sempahores* and *mutexes*.
 </details>
 
 <details>
