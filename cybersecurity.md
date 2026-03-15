@@ -81,7 +81,7 @@ No. Hiding a button in the UI (User Interface) does not secure the function. If 
 No. Hiding a button in the UI (User Interface) does not secure the function. If the underlying API or server-side function remains unprotected, an attacker can find the endpoint using browser developer tools, proxy logs, or brute-force "fuzzing."
 </details>
 
-### XXE Injection
+### XML External Entities (XXE Injection)
 
 <details>
 <summary>What is an XXE injection, and how does it work?</summary>
