@@ -59,3 +59,39 @@ Because Docker relies heavily on core Linux kernel features (like **namespaces**
 Docker Desktop for Windows runs a lightweight Linux environment behind the scenes.  It uses WSL 2 (Windows Subsystem for Linux) or Hyper-V. WSL 2 is the recommended default backend because it spins up an optimized, lightweight Linux micro-VM that integrates closely with Windows, offering fast performance and low resource overhead.
 
 </details>
+
+<details>
+<summary>In what use cases is Docker recommended?</summary>
+
+Docker is recommended for scenarios where consistency, isolation, and portability across different computing environments are critical. 
+
+- **Local Development and Testing**: Eliminates the "it works on my machine" problem by bundling code, runtimes, and dependencies into containers that precisely mirror production setups.  
+- **Microservices Architectures**: Allows individual services to be packaged, deployed, scaled, and updated independently without affecting the rest of the application.  
+- **CI/CD (Continuous Integration and Continuous Deployment)**: Ensures that code builds, automated tests, and deployment pipelines run in identical, repeatable environments from development to production.  Cloud-Native and Multi-Cloud Deployments: Simplifies moving applications seamlessly across different cloud providers (AWS, Azure, Google Cloud) or hybrid infrastructures without vendor lock-in.  
+- **AI and Machine Learning Workloads**: Packages complex ML frameworks, model weights, and specific library dependencies (like CUDA drivers or Python packages) into portable containers for reproducible training and inference.
+- **Dependency Sandboxing and Tool Testing**: Enables developers to spin up temporary services (such as a Redis cache or PostgreSQL database) or test new CLI tools safely without cluttering the host operating system.  
+- **Legacy Application Modernization**: Encapsulates older monolithic applications and their legacy dependencies to make them easier to run and manage on modern infrastructure without a complete rewrite.
+
+</details>
+
+
+
+
+<details>
+<summary>On what use cases is Docker not recommended?</summary>
+
+These are the most important use cases in which the use of Docker is not recommended:
+
+* **Heavy Desktop GUI Applications**: Running graphical user interface applications inside Docker requires complex workarounds like X11 forwarding or VNC, resulting in input lag, rendering issues, and cumbersome audio/video setups compared to native installations.
+
+* **Cross-Architecture Production Workloads**: Executing heavy container images compiled for a different CPU architecture (such as running linux/amd64 images on linux/arm64 hosts) relies on emulation layers like QEMU, which introduces severe performance penalties.
+
+* **Ultra-Low Latency and High-Performance Computing (HPC)**: Workloads requiring direct bare-metal hardware access, specialized network interfaces, or absolute maximum throughput can suffer from the slight virtualization overhead of network bridging and storage abstraction layers.
+
+* **Forcing Monolithic "All-in-One" Containers**: Bundling multiple unrelated background services, cron daemons, and application servers into a single container violates the core design principle of "one process per container," making debugging, logging, and scaling extremely difficult.
+
+* **Simple Static Content Hosting**: Deploying basic HTML, CSS, and JavaScript websites via Docker adds unnecessary steps—such as writing Dockerfiles, building images, and managing container registries—when static hosting providers or content delivery networks offer zero-config alternatives.
+
+* **Standalone Stateful Databases Without Expertise**: While databases run fine in containers, deploying production-grade databases on a single Docker host without automated backup systems, proper volume management, or orchestration tools risks data corruption and difficult recovery processes.
+</details>
+
