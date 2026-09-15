@@ -75,8 +75,6 @@ Docker is recommended for scenarios where consistency, isolation, and portabilit
 </details>
 
 
-
-
 <details>
 <summary>On what use cases is Docker not recommended?</summary>
 
@@ -95,3 +93,28 @@ These are the most important use cases in which the use of Docker is not recomme
 * **Standalone Stateful Databases Without Expertise**: While databases run fine in containers, deploying production-grade databases on a single Docker host without automated backup systems, proper volume management, or orchestration tools risks data corruption and difficult recovery processes.
 </details>
 
+<details>
+<summary>On what use cases is Docker not recommended?</summary>
+
+These are the most important use cases in which the use of Docker is not recommended:
+
+* **Heavy Desktop GUI Applications**: Running graphical user interface applications inside Docker requires complex workarounds like X11 forwarding or VNC, resulting in input lag, rendering issues, and cumbersome audio/video setups compared to native installations.
+
+* **Cross-Architecture Production Workloads**: Executing heavy container images compiled for a different CPU architecture (such as running linux/amd64 images on linux/arm64 hosts) relies on emulation layers like QEMU, which introduces severe performance penalties.
+
+* **Ultra-Low Latency and High-Performance Computing (HPC)**: Workloads requiring direct bare-metal hardware access, specialized network interfaces, or absolute maximum throughput can suffer from the slight virtualization overhead of network bridging and storage abstraction layers.
+
+* **Forcing Monolithic "All-in-One" Containers**: Bundling multiple unrelated background services, cron daemons, and application servers into a single container violates the core design principle of "one process per container," making debugging, logging, and scaling extremely difficult.
+
+* **Simple Static Content Hosting**: Deploying basic HTML, CSS, and JavaScript websites via Docker adds unnecessary steps—such as writing Dockerfiles, building images, and managing container registries—when static hosting providers or content delivery networks offer zero-config alternatives.
+
+* **Standalone Stateful Databases Without Expertise**: While databases run fine in containers, deploying production-grade databases on a single Docker host without automated backup systems, proper volume management, or orchestration tools risks data corruption and difficult recovery processes.
+
+</details>
+
+<details>
+<summary>What is the role of the Docker Daemon (dockerd)?</summary>
+
+**Docker Daemod** is the background service running on the host machine that manages Docker objects, including images, containers, networks, and volumes, by listening for requests from the Docker client API.
+
+</details>
