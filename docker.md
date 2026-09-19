@@ -118,3 +118,10 @@ These are the most important use cases in which the use of Docker is not recomme
 **Docker Daemod** is the background service running on the host machine that manages Docker objects, including images, containers, networks, and volumes, by listening for requests from the Docker client API.
 
 </details>
+
+<details>
+<summary>What is the main purpose of a multi-stage docker build?</summary>
+
+The primary purpose of a multi-stage docker build is to keep docker image small and secure by using multiple <code>FROM</code> instructions in a single <code>Docker</code> file.
+
+</details>
