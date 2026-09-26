@@ -1,5 +1,6 @@
-## Docker 
+# Docker 
 
+## Introduction, Architecture & Core Concepts
 <details>
 <summary>What is Docker?</summary>
 
@@ -28,10 +29,12 @@ Docker heavily relies on features that are directly built into the Linux kernel:
 * **CGroups**: While namespaces control what a process can see, cgroups control how much of a resource that process (or group of processes) can use.
 </details>
 
-<details>
-<summary>What is the difference between Docker containers and Virtual Machines?</summary>
 
-Unlike traditional virtual machines (VMs) that require a heavy guest operating system for every instance, Docker containers share the host machine's operating system kernel. This makes them significantly faster, lighter, and more resource-efficient.
+<details>
+<summary>What is the role of the Docker Daemon (dockerd)?</summary>
+
+**Docker Daemon** is the background service running on the host machine that manages Docker objects, including images, containers, networks, and volumes, by listening for requests from the Docker client API.
+
 </details>
 
 <details>
@@ -52,6 +55,32 @@ Today, Docker is an indispensable pillar of modern software engineering, serving
 </details>
 
 <details>
+<summary>What is the difference between an Image and a Container in Docker?</summary>
+
+- **Docker Image**: A read-only, static template that contains the application code, runtime, libraries, environment variables, and configuration files. It serves as the blueprint for creating containers and is built in layers.
+
+- **Docker Container**: A runnable and writable instance of a Docker image. When you start an image, Docker adds a thin read-write layer on top of the read-only image layers, allowing the application to execute, read, and write data. Multiple containers can be launched from the exact same image.
+</details>
+
+<details>
+<summary>What are Docker image layers and how do they work?</summary>
+
+Docker images are built as a stack of read-only layers. Each instruction in a `Dockerfile` (such as `FROM`, `RUN`, or `COPY`) creates a new layer that represents a set of changes relative to the layer below it. 
+
+* **Layer Caching:** Docker caches each layer during the build process. If a layer hasn't changed, Docker reuses the cached version rather than rebuilding it, which significantly speeds up build times.
+* **Storage Efficiency:** Because layers are shared across different images, Docker doesn't have to duplicate shared dependencies, saving disk space and memory.
+* **The Container Layer:** When you run a container, Docker places a thin, read-write layer on top of the read-only image layers. Any changes made while the container is running (like creating, modifying, or deleting files) happen entirely within this writable layer.
+</details>
+
+## Containers vs. VMs & Platform Support
+
+<details>
+<summary>What is the difference between Docker containers and Virtual Machines?</summary>
+
+Unlike traditional virtual machines (VMs) that require a heavy guest operating system for every instance, Docker containers share the host machine's operating system kernel. This makes them significantly faster, lighter, and more resource-efficient.
+</details>
+
+<details>
 <summary>Is there Docker native for Windows?</summary>
 
 Because Docker relies heavily on core Linux kernel features (like **namespaces** and **cgroups**), Linux containers cannot run natively on the Windows kernel. However, Docker provides a seamless official application for Windows called **Docker Desktop** that bridges this gap.
@@ -60,6 +89,8 @@ Docker Desktop for Windows runs a lightweight Linux environment behind the scene
 
 </details>
 
+
+## Use cases
 <details>
 <summary>In what use cases is Docker recommended?</summary>
 
@@ -74,7 +105,6 @@ Docker is recommended for scenarios where consistency, isolation, and portabilit
 
 </details>
 
-
 <details>
 <summary>On what use cases is Docker not recommended?</summary>
 
@@ -93,31 +123,7 @@ These are the most important use cases in which the use of Docker is not recomme
 * **Standalone Stateful Databases Without Expertise**: While databases run fine in containers, deploying production-grade databases on a single Docker host without automated backup systems, proper volume management, or orchestration tools risks data corruption and difficult recovery processes.
 </details>
 
-<details>
-<summary>On what use cases is Docker not recommended?</summary>
-
-These are the most important use cases in which the use of Docker is not recommended:
-
-* **Heavy Desktop GUI Applications**: Running graphical user interface applications inside Docker requires complex workarounds like X11 forwarding or VNC, resulting in input lag, rendering issues, and cumbersome audio/video setups compared to native installations.
-
-* **Cross-Architecture Production Workloads**: Executing heavy container images compiled for a different CPU architecture (such as running linux/amd64 images on linux/arm64 hosts) relies on emulation layers like QEMU, which introduces severe performance penalties.
-
-* **Ultra-Low Latency and High-Performance Computing (HPC)**: Workloads requiring direct bare-metal hardware access, specialized network interfaces, or absolute maximum throughput can suffer from the slight virtualization overhead of network bridging and storage abstraction layers.
-
-* **Forcing Monolithic "All-in-One" Containers**: Bundling multiple unrelated background services, cron daemons, and application servers into a single container violates the core design principle of "one process per container," making debugging, logging, and scaling extremely difficult.
-
-* **Simple Static Content Hosting**: Deploying basic HTML, CSS, and JavaScript websites via Docker adds unnecessary steps—such as writing Dockerfiles, building images, and managing container registries—when static hosting providers or content delivery networks offer zero-config alternatives.
-
-* **Standalone Stateful Databases Without Expertise**: While databases run fine in containers, deploying production-grade databases on a single Docker host without automated backup systems, proper volume management, or orchestration tools risks data corruption and difficult recovery processes.
-
-</details>
-
-<details>
-<summary>What is the role of the Docker Daemon (dockerd)?</summary>
-
-**Docker Daemod** is the background service running on the host machine that manages Docker objects, including images, containers, networks, and volumes, by listening for requests from the Docker client API.
-
-</details>
+## Building
 
 <details>
 <summary>What is the main purpose of a multi-stage docker build?</summary>
