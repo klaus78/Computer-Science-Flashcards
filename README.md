@@ -13,4 +13,5 @@ A set of flashcards on computer science and programming.
 * [Agile methodologies](agile-methodologies.md)
 * [Unit tests](unit-tests.md)
 * [Cybersecurity](cybersecurity.md)
+* [Certificates] (digital-certificates.md)
 * [Docker](docker.md) 
