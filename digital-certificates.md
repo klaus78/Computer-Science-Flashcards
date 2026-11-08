@@ -83,20 +83,31 @@ The difference in short between public and private CAs:
 * **Public CAs** are trusted globally by all browsers and devices, used to secure public websites.
 
 * **Private CAs** are trusted internally only by a specific organization, used to secure private networks, internal servers, and corporate devices.
-
-Public
 </details>
 
 <details>
 <summary>How Do Your Devices Trust a CA?</summary>
-Chain of trust
+
+Devices trust a CA because operating systems and web browsers come pre-installed with a built-in list of approved Root CAs (known as a Trust Store).
+
+When a device evaluates a certificate, it checks if the certificate chains back to one of these pre-approved root authorities. If the chain leads to a root stored in the device's trusted list, the device implicitly trusts the connection.
 </details>
 
 
 
 <details>
 <summary>What are the steps to check the validity of a certificate?</summary>
-Chain of trust
+To check if a digital certificate is valid, a browser or client performs these steps in order:
+
+1. **Check Expiry Dates**: verify that the current date and time fall between the certificate's "Not Before" and "Not After" timestamps.
+
+2. **Verify the Signature**: Use the issuer's public key to decrypt the digital certificate's signature and match it against the hash of the certificate data to confirm it hasn't been tampered with.
+
+3. **Trace the Trust Path**: Follow the chain of certificates upward from the leaf to an Intermediate CA and ultimately to a Root CA pre-installed in the device's Trust Store.
+
+4. **Check Revocation Status**: Query the Certificate Authority via OCSP (Online Certificate Status Protocol) or check a CRL (Certificate Revocation List) to ensure the certificate hasn't been prematurely revoked due to a compromised key.
+
+5. **Verify Hostname**: Confirm that the domain name in the URL matches the Subject Alternative Name (SAN) listed inside the certificate.
 </details>
 
 <details>
