@@ -113,4 +113,15 @@ To check if a digital certificate is valid, a browser or client performs these s
 <details>
 <summary>What is a certificate lifecycle?</summary>
 
+The **certificate lifecycle** refers to the stages a digital certificate goes through from creation to retirement:
+
+1. **Generation & Request**: Generating a cryptographic key pair and sending a Certificate Signing Request (CSR) to a CA.
+
+2. **Validation**: The CA verifies the requester's domain ownership or legal identity.
+
+3. **Issuance**: The CA signs the certificate and issues it to the requester.
+
+4. **Deployment**: Installing the certificate on a server or device to secure traffic.
+
+5. **Renewal or Revocation**: Automatically renewing the certificate before its expiration date, or revoking it early if the private key is compromised.
 </details>
